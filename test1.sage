@@ -4,13 +4,24 @@
 # Date: 06/3/13
 # Latest version: /13
 
+# /usr/lib/sagemath/local/bin
+
 t = cputime()
 
-load mgA_engine.sage
+#import sys
+#from sage.all import *
+sage.misc.reset.reset_attached(); reset_load_attach_path()
+t_dir = tmp_dir()
+load_attach_path(t_dir)
+#sys.path.append('~/Dropbox/Mathematics/Work/Cobordism type A')
+
+#print sys.path
+attach mgA_header.sage
+attach engine.sage
 
 m = 3
-law = "additive"
-print "working"
+law = "multiplicative"
+[W, s, w0, e, bi, x, y, temp]=initiation(m)
+print "ignited!"
 engine(m, law)
-print "done"
 print cputime(t)

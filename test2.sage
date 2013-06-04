@@ -6,11 +6,13 @@
 
 t = cputime()
 
-load mgA_engine.sage
+load mgA_header.sage
+load engine.sage
 
 m = 3
 law = "tangent"
-print "working"
+[W, s, w0, e, bi, x, y, temp]=initiation(m)
+print "ignited!"
 engine(m, law)
-print "done"
 print cputime(t)
+save_session('tangent_law_A3_060313')

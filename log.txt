@@ -1,0 +1,8 @@
+6/03/13:
+*put functions into separate .sage files, loaded through mgA_header.sage
+*the function engine() is put separately on engine.sage
+*dependency issue, e.g. Delta uses bi in the master file.
+*tangent law for type A3 is saved in "tangent_law_A3_060313"
+took 666.79 seconds (11 minutes)
+*multiplicative law for type A3
+*additive law for type A3
